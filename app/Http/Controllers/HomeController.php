@@ -6,14 +6,17 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
+    }
+
+    public function index()
+    {
+        $page_title = 'Dashboard';
+        $page_description = 'Some description for the page';
+
+        return view('pages.dashboard', compact('page_title', 'page_description'));
     }
 
     public function home()
