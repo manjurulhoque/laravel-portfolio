@@ -30,3 +30,5 @@ Route::get('/home', [HomeController::class, 'home'])->name('home');
 // custom routes
 Route::resource('services', ServicesController::class);
 
+Route::get('/api/services', [ServicesController::class, 'services_api']);
+

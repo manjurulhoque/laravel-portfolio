@@ -7,6 +7,16 @@ use Illuminate\Http\Request;
 
 class ServicesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('store');
+    }
+
+    public function services_api()
+    {
+        return Services::all();
+    }
+
     public function index()
     {
         $page_title = 'Services';
