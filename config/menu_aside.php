@@ -17,10 +17,10 @@ return [
             'section' => 'Features',
         ],
         [
-            'title' => 'Bootstrap',
+            'title' => 'Services',
             'root' => true,
             'icon' => 'media/svg/icons/Shopping/Box2.svg',
-            'page' => 'features/bootstrap/typography',
+            'page' => 'services',
             'visible' => 'preview',
         ]
     ]
