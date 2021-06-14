@@ -1,7 +1,7 @@
 {{-- Topbar --}}
 <div class="topbar">
 
-    {{-- Search --}}
+{{--    --}}{{-- Search --}}
     @if (config('layout.extras.search.display'))
         @if (config('layout.extras.search.layout') == 'offcanvas')
             <div class="topbar-item">
@@ -11,14 +11,14 @@
             </div>
         @else
             <div class="dropdown" id="kt_quick_search_toggle">
-                {{-- Toggle --}}
+                 Toggle
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                     <div class="btn btn-icon btn-clean btn-lg btn-dropdown mr-1">
-                       {{ Metronic::getSVG("media/svg/icons/General/Search.svg", "svg-icon-xl svg-icon-primary") }}
+                        {{ Metronic::getSVG("media/svg/icons/General/Search.svg", "svg-icon-xl svg-icon-primary") }}
                     </div>
                 </div>
 
-                {{-- Dropdown --}}
+                 Dropdown
                 <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
                     @include('layout.partials.extras.dropdown._search-dropdown')
                 </div>
@@ -26,7 +26,7 @@
         @endif
     @endif
 
-    {{-- Notifications --}}
+{{--    --}}{{-- Notifications --}}
     @if (config('layout.extras.notifications.display'))
         @if (config('layout.extras.notifications.layout') == 'offcanvas')
             <div class="topbar-item">
@@ -37,7 +37,7 @@
             </div>
         @else
             <div class="dropdown">
-                {{-- Toggle --}}
+                 Toggle
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                     <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1 pulse pulse-primary">
                         {{ Metronic::getSVG("media/svg/icons/Code/Compiling.svg", "svg-icon-xl svg-icon-primary") }}
@@ -45,7 +45,7 @@
                     </div>
                 </div>
 
-                {{-- Dropdown --}}
+                 Dropdown
                 <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
                     <form>
                         @include('layout.partials.extras.dropdown._notifications')
@@ -55,7 +55,7 @@
         @endif
     @endif
 
-    {{-- Quick Actions --}}
+{{--    --}}{{-- Quick Actions --}}
     @if (config('layout.extras.quick-actions.display'))
         @if (config('layout.extras.quick-actions.layout') == 'offcanvas')
             <div class="topbar-item">
@@ -65,14 +65,14 @@
             </div>
         @else
             <div class="dropdown">
-                {{-- Toggle --}}
+                 Toggle
                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                     <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
                         {{ Metronic::getSVG("media/svg/icons/Media/Equalizer.svg", "svg-icon-xl svg-icon-primary") }}
                     </div>
                 </div>
 
-                {{-- Dropdown --}}
+                 Dropdown
                 <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
                     @include('layout.partials.extras.dropdown._quick-actions')
                 </div>
@@ -80,17 +80,17 @@
         @endif
     @endif
 
-    {{-- My Cart --}}
+{{--    --}}{{-- My Cart --}}
     @if (config('layout.extras.cart.display'))
         <div class="dropdown">
-            {{-- Toggle --}}
-            <div class="topbar-item"  data-toggle="dropdown" data-offset="10px,0px">
+             Toggle
+            <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                 <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
                     {{ Metronic::getSVG("media/svg/icons/Shopping/Cart3.svg", "svg-icon-xl svg-icon-primary") }}
                 </div>
             </div>
 
-            {{-- Dropdown --}}
+             Dropdown
             <div class="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-xl dropdown-menu-anim-up">
                 <form>
                     @include('layout.partials.extras.dropdown._cart')
@@ -108,12 +108,13 @@
         </div>
     @endif
 
-    {{-- Languages --}}
+{{--    --}}{{-- Languages --}}
     @if (config('layout.extras.languages.display'))
         <div class="dropdown">
             <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
                 <div class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
-                    <img class="h-20px w-20px rounded-sm" src="{{ asset('media/svg/flags/226-united-states.svg') }}" alt=""/>
+                    <img class="h-20px w-20px rounded-sm" src="{{ asset('media/svg/flags/226-united-states.svg') }}"
+                         alt=""/>
                 </div>
             </div>
 
@@ -127,7 +128,8 @@
     @if (config('layout.extras.user.display'))
         @if (config('layout.extras.user.layout') == 'offcanvas')
             <div class="topbar-item">
-                <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
+                <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2"
+                     id="kt_quick_user_toggle">
                     <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
                     <span class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
                     <span class="symbol symbol-35 symbol-light-success">

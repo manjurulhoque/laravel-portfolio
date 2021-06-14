@@ -13,7 +13,9 @@
     <div class="separator separator-solid"></div>
 @else
     {{-- Header --}}
-    <div class="d-flex align-items-center justify-content-between flex-wrap p-8 bgi-size-cover bgi-no-repeat rounded-top" style="background-image: url('{{ asset('media/misc/bg-1.jpg') }}')">
+    <div
+        class="d-flex align-items-center justify-content-between flex-wrap p-8 bgi-size-cover bgi-no-repeat rounded-top"
+        style="background-image: url('{{ asset('media/misc/bg-1.jpg') }}')">
         <div class="d-flex align-items-center mr-2">
             {{-- Symbol --}}
             <div class="symbol bg-white-o-15 mr-3">
@@ -48,7 +50,7 @@
     </a>
 
     {{-- Item --}}
-    <a href="#"  class="navi-item px-8">
+    <a href="#" class="navi-item px-8">
         <div class="navi-link">
             <div class="navi-icon mr-2">
                 <i class="flaticon2-mail text-warning"></i>
@@ -65,7 +67,7 @@
     </a>
 
     {{-- Item --}}
-    <a href="#"  class="navi-item px-8">
+    <a href="#" class="navi-item px-8">
         <div class="navi-link">
             <div class="navi-icon mr-2">
                 <i class="flaticon2-rocket-1 text-danger"></i>

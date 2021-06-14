@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutMeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ServicesController;
@@ -29,6 +30,9 @@ Route::get('/home', [HomeController::class, 'home'])->name('home');
 
 // custom routes
 Route::resource('services', ServicesController::class);
+Route::get('about-me', [AboutMeController::class, 'show'])->name('about-me');
+Route::get('about-me-edit', [AboutMeController::class, 'edit'])->name('about-me-edit');
+Route::get('about-me-update', [AboutMeController::class, 'update'])->name('about-me-update');
 
 Route::get('/api/services', [ServicesController::class, 'services_api']);
 

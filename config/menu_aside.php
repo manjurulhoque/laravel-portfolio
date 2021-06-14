@@ -22,6 +22,13 @@ return [
             'icon' => 'media/svg/icons/Shopping/Box2.svg',
             'page' => 'services',
             'visible' => 'preview',
+        ],
+        [
+            'title' => 'About me',
+            'root' => true,
+            'icon' => 'media/svg/icons/Shopping/Box2.svg',
+            'page' => 'about-me',
+            'visible' => 'preview',
         ]
     ]
 
