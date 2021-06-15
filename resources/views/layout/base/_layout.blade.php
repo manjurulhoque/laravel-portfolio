@@ -17,7 +17,8 @@
 
                 @include('layout.base._header')
 
-                <div class="content {{ Metronic::printClasses('content', false) }} d-flex flex-column flex-column-fluid" id="kt_content">
+                <div class="content {{ Metronic::printClasses('content', false) }} d-flex flex-column flex-column-fluid"
+                     id="kt_content">
 
                     @if(config('layout.subheader.display'))
                         @if(array_key_exists(config('layout.subheader.layout'), config('layout.subheader.layouts')))
@@ -25,6 +26,17 @@
                         @else
                             @include('layout.partials.subheader._'.array_key_first(config('layout.subheader.layouts')))
                         @endif
+                    @endif
+
+                    @if (count($errors) > 0)
+                        <div class="alert alert-danger">
+                            <strong>Whoops!</strong> There were some problems with your input.
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
                     @endif
 
                     @include('layout.base._content')

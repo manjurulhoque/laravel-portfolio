@@ -32,7 +32,7 @@ Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::resource('services', ServicesController::class);
 Route::get('about-me', [AboutMeController::class, 'show'])->name('about-me');
 Route::get('about-me-edit', [AboutMeController::class, 'edit'])->name('about-me-edit');
-Route::get('about-me-update', [AboutMeController::class, 'update'])->name('about-me-update');
+Route::post('about-me-update', [AboutMeController::class, 'update'])->name('about-me-update');
 
 Route::get('/api/services', [ServicesController::class, 'services_api']);
 

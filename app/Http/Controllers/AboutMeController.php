@@ -10,7 +10,7 @@ class AboutMeController extends Controller
     public function show()
     {
         $page_title = 'About me details';
-        $about = AboutMe::where('id', 1)->get();
+        $about = AboutMe::where('id', 1)->first();
 
         return view('pages.about.show', compact('about', 'page_title'));
     }
@@ -18,17 +18,37 @@ class AboutMeController extends Controller
     public function edit()
     {
         $page_title = 'Update details';
-        return view('pages.about.edit', compact('page_title'));
+        $about = AboutMe::where('id', 1)->first();
+        return view('pages.about.edit', compact('page_title', 'about'));
     }
 
     public function update(Request $request)
     {
-        $about = AboutMe::where('id', 1)->get();
+        $request->validate([
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5288',
+        ]);
+
+        $about = AboutMe::where('id', 1)->first();
 
         if ($about) {
-            $about->fill($request->all())->save();
+            $about = $about->fill($request->all())->save();
         } else {
-            AboutMe::create($request->all());
+            $about = AboutMe::create($request->all());
+        }
+
+        if ($request->hasFile('image')) {
+            $about = AboutMe::where('id', 1)->first();
+
+            try {
+                $imageName = time() . '.' . $request->image->extension();
+
+                $request->image->move(public_path('images'), $imageName);
+
+                $about->image = $imageName;
+                $about->save();
+            } catch (\Exception $e) {
+                dd($e);
+            }
         }
 
         return redirect(route('about-me'));

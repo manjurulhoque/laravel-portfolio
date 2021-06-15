@@ -50,13 +50,8 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="#"
-                                       class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">Top
-                                        Authors</a>
-                                    <div class="font-size-sm text-muted font-weight-bold mt-1">Ricky
-                                        Hunt,
-                                        Sandra Trepp
-                                    </div>
+                                    <a href="#" class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Name</a>
+                                    <div class="font-size-sm font-weight-boldest mt-1">{{ $about->name }}</div>
                                 </div>
                             </div>
                         </div>
@@ -71,11 +66,9 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="#"
-                                       class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">Bestsellers</a>
-                                    <div class="font-size-sm text-muted font-weight-bold mt-1">Pitstop
-                                        Email
-                                        Marketing
+                                    <a href="#" class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Email</a>
+                                    <div class="font-size-sm font-weight-boldest mt-1">
+                                        {{ $about->email }}
                                     </div>
                                 </div>
                             </div>
@@ -91,12 +84,9 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="#"
-                                       class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">Top
-                                        Engagement</a>
-                                    <div class="font-size-sm text-muted font-weight-bold mt-1">KT.com
-                                        solution
-                                        provider
+                                    <a href="#" class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Phone</a>
+                                    <div class="font-size-sm font-weight-boldest mt-1">
+                                        {{ $about->phone }}
                                     </div>
                                 </div>
                             </div>
@@ -118,12 +108,9 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="#"
-                                       class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">Top
-                                        Authors</a>
-                                    <div class="font-size-sm text-muted font-weight-bold mt-1">Ricky
-                                        Hunt,
-                                        Sandra Trepp
+                                    <a href="#" class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Details</a>
+                                    <div class="font-size-sm font-weight-boldest mt-1">
+                                        {{ $about->details }}
                                     </div>
                                 </div>
                             </div>
@@ -139,32 +126,11 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="#"
-                                       class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">Bestsellers</a>
-                                    <div class="font-size-sm text-muted font-weight-bold mt-1">Pitstop
-                                        Email
-                                        Marketing
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center mr-2">
-                                <div class="symbol symbol-50 symbol-light mr-3 flex-shrink-0">
-                                    <div class="symbol-label">
-                                        <img src="{{ asset('media/svg/misc/003-puzzle.svg') }}" alt=""
-                                             class="h-50"/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <a href="#"
-                                       class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">Top
-                                        Engagement</a>
-                                    <div class="font-size-sm text-muted font-weight-bold mt-1">KT.com
-                                        solution
-                                        provider
+                                    <a href="#" class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Image</a>
+                                    <div class="font-size-sm font-weight-boldest mt-1">
+                                        @if($about->image)
+                                            <img class="img-fluid img-thumbnail" src="{{ asset('images/' . $about->image) }}" alt="">
+                                        @endif
                                     </div>
                                 </div>
                             </div>
