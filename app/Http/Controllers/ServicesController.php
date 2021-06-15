@@ -9,7 +9,7 @@ class ServicesController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('store');
+        $this->middleware('auth')->except(['services_api']);
     }
 
     public function services_api()

@@ -7,10 +7,20 @@ use Illuminate\Http\Request;
 
 class AboutMeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['about_api']);
+    }
+
+    public function about_api()
+    {
+        return AboutMe::take(1)->first();
+    }
+
     public function show()
     {
         $page_title = 'About me details';
-        $about = AboutMe::where('id', 1)->first();
+        $about = AboutMe::take(1)->first();
 
         return view('pages.about.show', compact('about', 'page_title'));
     }
@@ -18,7 +28,7 @@ class AboutMeController extends Controller
     public function edit()
     {
         $page_title = 'Update details';
-        $about = AboutMe::where('id', 1)->first();
+        $about = AboutMe::take(1)->first();
         return view('pages.about.edit', compact('page_title', 'about'));
     }
 
@@ -28,7 +38,7 @@ class AboutMeController extends Controller
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5288',
         ]);
 
-        $about = AboutMe::where('id', 1)->first();
+        $about = AboutMe::take(1)->first();
 
         if ($about) {
             $about = $about->fill($request->all())->save();
@@ -37,7 +47,7 @@ class AboutMeController extends Controller
         }
 
         if ($request->hasFile('image')) {
-            $about = AboutMe::where('id', 1)->first();
+            $about = AboutMe::take(1)->first();
 
             try {
                 $imageName = time() . '.' . $request->image->extension();

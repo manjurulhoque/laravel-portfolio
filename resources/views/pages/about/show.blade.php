@@ -50,8 +50,10 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="#" class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Name</a>
-                                    <div class="font-size-sm font-weight-boldest mt-1">{{ $about->name }}</div>
+                                    <a href="#"
+                                       class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Name</a>
+                                    <div
+                                        class="font-size-sm font-weight-boldest mt-1">@if(!is_null($about)) {{ $about->name }} @endif</div>
                                 </div>
                             </div>
                         </div>
@@ -66,9 +68,10 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="#" class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Email</a>
+                                    <a href="#"
+                                       class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Email</a>
                                     <div class="font-size-sm font-weight-boldest mt-1">
-                                        {{ $about->email }}
+                                        @if(!is_null($about)) {{ $about->email }} @endif
                                     </div>
                                 </div>
                             </div>
@@ -84,9 +87,10 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="#" class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Phone</a>
+                                    <a href="#"
+                                       class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Phone</a>
                                     <div class="font-size-sm font-weight-boldest mt-1">
-                                        {{ $about->phone }}
+                                        @if(!is_null($about)) {{ $about->phone }} @endif
                                     </div>
                                 </div>
                             </div>
@@ -108,9 +112,10 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="#" class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Details</a>
+                                    <a href="#"
+                                       class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Details</a>
                                     <div class="font-size-sm font-weight-boldest mt-1">
-                                        {{ $about->details }}
+                                        @if(!is_null($about)) {{ $about->details }} @endif
                                     </div>
                                 </div>
                             </div>
@@ -126,10 +131,12 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <a href="#" class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Image</a>
+                                    <a href="#"
+                                       class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Image</a>
                                     <div class="font-size-sm font-weight-boldest mt-1">
-                                        @if($about->image)
-                                            <img class="img-fluid img-thumbnail" src="{{ asset('images/' . $about->image) }}" alt="">
+                                        @if(!is_null($about) && $about->image)
+                                            <img class="img-fluid img-thumbnail"
+                                                 src="{{ asset('images/' . $about->image) }}" alt="">
                                         @endif
                                     </div>
                                 </div>

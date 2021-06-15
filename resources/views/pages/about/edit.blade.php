@@ -57,7 +57,7 @@
 
                         <div class="separator separator-dashed my-5"></div>
 
-                        @if($about->image)
+                        @if(!is_null($about) && $about->image)
                             <label>Previous Image:</label>
                             <img class="img-fluid img-thumbnail" src="{{ asset('images/' . $about->image) }}" alt="">
                         @endif

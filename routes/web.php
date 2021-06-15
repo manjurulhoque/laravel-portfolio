@@ -35,4 +35,5 @@ Route::get('about-me-edit', [AboutMeController::class, 'edit'])->name('about-me-
 Route::post('about-me-update', [AboutMeController::class, 'update'])->name('about-me-update');
 
 Route::get('/api/services', [ServicesController::class, 'services_api']);
+Route::get('/api/about', [AboutMeController::class, 'about_api']);
 
