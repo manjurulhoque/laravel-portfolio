@@ -11,7 +11,7 @@
             </div>
             <div class="card-toolbar">
                 <!--begin::Button-->
-                <a href="{{ route('services.create') }}" class="btn btn-primary font-weight-bolder">
+                <a href="{{ route('skills.create') }}" class="btn btn-primary font-weight-bolder">
                 <span class="svg-icon svg-icon-md">
                     <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"
@@ -35,21 +35,21 @@
             <table class="table table-bordered table-hover" id="kt_datatable">
                 <thead>
                 <tr>
-                    <th>Icon</th>
                     <th>Title</th>
-                    <th>Description</th>
+                    <th>Text</th>
+                    <th>Width</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($services as $service)
+                @foreach($skills as $skill)
                     <tr>
-                        <td>{{ $service->icon }}</td>
-                        <td>{{ $service->title }}</td>
-                        <td>{{ $service->description }}</td>
+                        <td>{{ $skill->title }}</td>
+                        <td>{{ $skill->text }}</td>
+                        <td>{{ $skill->width }}</td>
                         <td>
-                            <a href="{{ route('services.edit', $service->id) }}"
-                               class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details">
+                            <a href="{{ route('skills.edit', $skill->id) }}" class="btn btn-sm btn-clean btn-icon mr-2"
+                               title="Edit details">
                                 <span class="svg-icon svg-icon-md">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -67,13 +67,12 @@
                                     </svg>
                                 </span>
                             </a>
-                            <form action="{{ route('services.destroy',$service->id) }}" id="skills-{{$service->id}}"
+                            <form action="{{ route('skills.destroy',$skill->id) }}" id="skills-{{$skill->id}}"
                                   method="POST" style="display: none">
                                 @csrf
                                 @method('DELETE')
                             </form>
-                            <a href="#" onclick="document.getElementById('skills-{{$service->id}}').submit()"
-                               class="btn btn-sm btn-clean btn-icon"
+                            <a href="#" onclick="document.getElementById('skills-{{$skill->id}}').submit()" class="btn btn-sm btn-clean btn-icon"
                                title="Delete">
                                 <span class="svg-icon svg-icon-md">
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

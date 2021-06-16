@@ -14,7 +14,7 @@ class AboutMe extends Model
 
     public function getImagePathAttribute()
     {
-        if ($this->image) return request()->getHttpHost() . '/images/' . $this->image;
+        if ($this->image) return request()->getSchemeAndHttpHost() . '/images/' . $this->image;
         else return '';
     }
 }

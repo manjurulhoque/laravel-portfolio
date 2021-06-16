@@ -24,6 +24,13 @@ return [
             'visible' => 'preview',
         ],
         [
+            'title' => 'Skills',
+            'root' => true,
+            'icon' => 'media/svg/icons/Shopping/Box2.svg',
+            'page' => 'skills',
+            'visible' => 'preview',
+        ],
+        [
             'title' => 'About me',
             'root' => true,
             'icon' => 'media/svg/icons/Shopping/Box2.svg',

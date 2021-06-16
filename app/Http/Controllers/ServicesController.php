@@ -49,7 +49,6 @@ class ServicesController extends Controller
     public function edit($id)
     {
         $page_title = 'Edit service';
-        $page_description = 'Some description for the page';
 
         $services = Services::findOrFail($id);
 
