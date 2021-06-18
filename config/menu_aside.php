@@ -38,6 +38,13 @@ return [
             'visible' => 'preview',
         ],
         [
+            'title' => 'Portfolios',
+            'root' => true,
+            'icon' => 'media/svg/icons/Shopping/Box2.svg',
+            'page' => 'portfolios',
+            'visible' => 'preview',
+        ],
+        [
             'title' => 'About me',
             'root' => true,
             'icon' => 'media/svg/icons/Shopping/Box2.svg',

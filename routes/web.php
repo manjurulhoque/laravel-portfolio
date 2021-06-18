@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\SkillController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -34,6 +35,8 @@ Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::resource('services', ServicesController::class);
 Route::resource('skills', SkillController::class);
 Route::resource('reviews', ReviewController::class);
+Route::resource('portfolios', PortfolioController::class);
+
 Route::get('about-me', [AboutMeController::class, 'show'])->name('about-me');
 Route::get('about-me-edit', [AboutMeController::class, 'edit'])->name('about-me-edit');
 Route::post('about-me-update', [AboutMeController::class, 'update'])->name('about-me-update');
@@ -42,4 +45,5 @@ Route::get('/api/services', [ServicesController::class, 'services_api']);
 Route::get('/api/about', [AboutMeController::class, 'about_api']);
 Route::get('/api/skills', [SkillController::class, 'skills_api']);
 Route::get('/api/reviews', [ReviewController::class, 'reviews_api']);
+Route::get('/api/portfolios', [PortfolioController::class, 'portfolios_api']);
 
