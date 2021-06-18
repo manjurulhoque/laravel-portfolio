@@ -31,6 +31,13 @@ return [
             'visible' => 'preview',
         ],
         [
+            'title' => 'Reviews',
+            'root' => true,
+            'icon' => 'media/svg/icons/Shopping/Box2.svg',
+            'page' => 'reviews',
+            'visible' => 'preview',
+        ],
+        [
             'title' => 'About me',
             'root' => true,
             'icon' => 'media/svg/icons/Shopping/Box2.svg',
