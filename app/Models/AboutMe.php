@@ -9,7 +9,7 @@ class AboutMe extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'details', 'email', 'phone', 'image'];
+    protected $fillable = ['name', 'details', 'email', 'phone', 'image', 'address'];
     protected $appends = ['image_path'];
 
     public function getImagePathAttribute()

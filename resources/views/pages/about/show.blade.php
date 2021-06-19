@@ -78,6 +78,25 @@
                         </div>
                         <!--end::Item-->
                         <!--begin::Item-->
+                        <div class="d-flex align-items-center justify-content-between mb-10">
+                            <div class="d-flex align-items-center mr-2">
+                                <div class="symbol symbol-50 symbol-light mr-3 flex-shrink-0">
+                                    <div class="symbol-label">
+                                        <img src="{{ asset('media/svg/misc/012-foursquare.svg') }}" alt=""
+                                             class="h-50"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <a href="#"
+                                       class="font-size-h6 text-dark-75 text-muted text-hover-primary font-weight-bolder">Address</a>
+                                    <div class="font-size-sm font-weight-boldest mt-1">
+                                        @if(!is_null($about)) {{ $about->address }} @endif
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end::Item-->
+                        <!--begin::Item-->
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="d-flex align-items-center mr-2">
                                 <div class="symbol symbol-50 symbol-light mr-3 flex-shrink-0">

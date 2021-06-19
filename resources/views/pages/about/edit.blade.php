@@ -57,6 +57,15 @@
 
                         <div class="separator separator-dashed my-5"></div>
 
+                        <div class="form-group">
+                            <label>Address:</label>
+                            <input type="text" class="form-control" placeholder="Enter address" name="address"
+                                   value="@if(!is_null($about)) {{ $about->address }} @endif"/>
+                            <span class="form-text text-muted">Please enter your address</span>
+                        </div>
+
+                        <div class="separator separator-dashed my-5"></div>
+
                         @if(!is_null($about) && $about->image)
                             <label>Previous Image:</label>
                             <img class="img-fluid img-thumbnail" src="{{ asset('images/' . $about->image) }}" alt="">
